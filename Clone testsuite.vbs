@@ -13,7 +13,7 @@ Dim write_log,filename_log
     teamproject="YOUR_PROJECT_NAME"
 'путь к утилите TCM.exe
     path_tcm="C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE"
-'флаг записи в лог: Y-да/N-нет
+'флаг записи лога в файл: Y-да/N-нет
     write_log="Y"
 'имя файла лога с расширением
     filename_log="clone_testsuite.log"
@@ -61,7 +61,7 @@ If write_log="Y" Then
     Dim FSO, File
     Set FSO = CreateObject("Scripting.FileSystemObject")
     
-    '8 - режим открытия файла: 1 - Только для чтения; 2 - Для записи, если файл существовал, то его содержимое теряется; 8 - Дописывать в конец файла.
+    'режим открытия файла: 1 - Только для чтения; 2 - Для записи, если файл существовал, то его содержимое теряется; 8 - Дописывать в конец файла.
     'True/False - cоздать файл, если он не существует (True), в противном случае False.
     Set File = FSO.OpenTextFile(path_vbs & "\" & filename_log, 8, True)
 	
